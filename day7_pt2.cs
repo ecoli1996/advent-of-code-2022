@@ -78,7 +78,6 @@ namespace AdventOfCode
             long space = 30000000;
             long currentMinSize = 70000000;
             long unusedSpace = currentMinSize;
-            var allSums = new SortedSet<long>();
 
             foreach (var x in all)
             {
@@ -88,7 +87,6 @@ namespace AdventOfCode
                     unusedSpace = currentMinSize - sum;
                 }
 
-                allSums.Add(sum);
                 if (unusedSpace + sum >= space) {
                     currentMinSize = Math.Min(currentMinSize, sum);
                 }
